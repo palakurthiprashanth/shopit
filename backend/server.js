@@ -27,8 +27,8 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET
 })
 
-const server = app.listen(5000, () => {
-    console.log(`Server started on PORT: 5000 in ${process.env.NODE_ENV} mode.`)
+const server = app.listen(process.env.PORT || 5000, () => {
+    console.log(`Server started on PORT: ${process.env.PORT} in ${process.env.NODE_ENV} mode.`)
 })
 
 // Handle Unhandled Promise rejections
